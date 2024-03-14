@@ -1,0 +1,128 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+:root {
+  --dark-gray-color: #0d1117;
+  --medium-gray-color: #161b22;
+  --light-gray-color: #1f242c;
+  --dark-text-color: #848d97;
+  --light-text-color: #e6edf3;
+  --border-color: #30363d;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--dark-gray-color);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.card {
+  background-color: var(--medium-gray-color);
+  border: 1px solid var(--border-color);
+  padding: 2rem 4rem;
+  border-radius: 0.5em;
+  max-width: 55rem;
+  width: 85%;
+}
+.card__header {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.avatar {
+  height: 14rem;
+  width: 14rem;
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.card__header p {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.first-name,
+.last-name {
+  font-size: 2rem;
+  color: var(--light-text-color);
+  border-bottom: 1px solid var(--border-color);
+  flex-grow: 1;
+}
+
+.about {
+  border: 1px solid var(--border-color);
+  padding: 2rem 4rem;
+  border-radius: 0.5em;
+}
+
+.about p {
+  font-size: 1.6rem;
+  color: var(--light-text-color);
+  text-transform: capitalize;
+}
+
+.about p span {
+  color: var(--dark-text-color);
+}
+
+.btn {
+  border: 1px solid var(--border-color);
+  font-size: 1.6rem;
+  background-color: var(--light-gray-color);
+  color: var(--light-text-color);
+  padding: 0.5rem 2rem;
+  border-radius: 0.3em;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
